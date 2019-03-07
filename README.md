@@ -1,8 +1,8 @@
-# VVV Custom site template
+# VVV ClassicPress template
 For when you just need a simple dev site
 
 ## Overview
-This template will allow you to create a WordPress dev environment using only `vvv-custom.yml`.
+This template will allow you to create a ClassicPress dev environment using only `vvv-custom.yml`.
 
 The supported environments are:
 - A single site
@@ -15,7 +15,7 @@ The supported environments are:
 
 ```
 my-site:
-  repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+  repo: https://github.com/btptech/vvv-classicpress-template.git
   hosts:
     - my-site.test
 ```
@@ -25,31 +25,13 @@ my-site:
 | Site Title | my-site.test |
 | DB Name    | my-site     |
 | Site Type  | Single      |
-| WP Version | Latest      |
-
-### Minimal configuration with custom domain and WordPress Nightly:
-
-```
-my-site:
-  repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
-  hosts:
-    - foo.test
-  custom:
-    wp_version: nightly
-```
-| Setting    | Value       |
-|------------|-------------|
-| Domain     | foo.test     |
-| Site Title | foo.test     |
-| DB Name    | my-site     |
-| Site Type  | Single      |
-| WP Version | Nightly     |
+| CP Version | Latest      |
 
 ### WordPress Multisite with Subdomains:
 
 ```
 my-site:
-  repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+  repo: https://github.com/btptech/vvv-classicpress-template.git
   hosts:
     - multisite.test
     - site1.multisite.test
@@ -68,7 +50,7 @@ my-site:
 
 ```
 my-site:
-  repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+  repo: https://github.com/btptech/vvv-classicpress-template.git
   hosts:
     - multisite.test
   custom:
@@ -97,18 +79,6 @@ custom:
     site_title: My Awesome Dev Site
 ```
 Defines the site title to be set upon installing WordPress.
-
-```
-custom:
-    wp_version: 4.6.4
-```
-Defines the WordPress version you wish to install.
-Valid values are:
-- nightly
-- latest
-- a version number
-
-Older versions of WordPress will not run on PHP7, see this page on [how to change PHP version per site](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/changing-php-version/).
 
 ```
 custom:
