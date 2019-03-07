@@ -25,7 +25,7 @@ if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/wp-load.php" ]]; then
     echo "Downloading WordPress..."
     echo $PWD
 	# noroot wp core download --version="${WP_VERSION}"
-	git clone https://github.com/ClassicPress/ClassicPress.git .
+	git clone https://github.com/ClassicPress/ClassicPress.git ../public_html
 fi
 
 if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/wp-config.php" ]]; then
