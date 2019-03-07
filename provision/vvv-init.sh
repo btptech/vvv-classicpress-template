@@ -27,7 +27,7 @@ if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/wp-load.php" ]]; then
 	# noroot wp core download --version="${WP_VERSION}"
 	git clone https://github.com/ClassicPress/ClassicPress.git ../public_html
   cd ../public_html
-  rm -rf !(src)
+  rm -rf !("src")
   cd src
   find . -exec mv {} .. \;
   cd ..
